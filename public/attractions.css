@@ -1,0 +1,129 @@
+#tableContainer {
+    height: 90%;
+}
+
+#attractionsTable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #444;
+    display: flex;
+    flex-flow: column;
+    max-height: 100%;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+thead {
+    background-color: hsl(162, 50%, 50%);
+    color: var(--background);
+    width: calc(100% - 0.99vw);
+}
+
+tbody {
+    display: block;
+    overflow-y: scroll;
+}
+
+table tbody tr {
+    width: 100%;
+}
+
+table thead, table tbody tr {
+    display: table;
+    table-layout: fixed;
+}
+
+th {
+    white-space: nowrap;
+    font-size: 100%;
+}
+
+th, td {
+    padding: 10px;
+    width: 12.5%;
+    max-width: 12.5%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: hsl(162, 40%, 60%);
+}
+
+tbody tr:nth-child(even) {
+    background-color: hsl(162, 40%, 70%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.checked {
+    color: rgb(238, 238, 53);
+}
+
+.fa {
+    margin: 1.5px;
+}
+
+main {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#addressFloater {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+#contentBox {
+    width: 50%;
+    height: 25%;
+    display: block;
+    background-color: hsl(162, 60%, 70%);
+    color: black;
+    text-align: center;
+    display: grid;
+    grid-template:
+        "bar"
+        "content";
+    grid-template-rows: 20% 80%;
+}
+
+#contentBox #bar {
+    grid-area: bar;
+    display: grid;
+    align-items: center;
+    grid-template: ". h6 p";
+    grid-template-columns: 20% 60% 20%;
+    font-size: 150%;
+    background-color: #222;
+    color: var(--white);
+}
+
+#bar h6 {
+    grid-area: h6;
+}
+
+#bar p {
+    grid-area: p;
+}
+
+#contentBox #content {
+    grid-area: content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main p {
+    line-height: 1;
+    border-left: none;
+    padding-left: 0px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Houston Herald</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <h1>Houston Herald</h1>
+        </a>
+        <img src="./images/Logo.webp" />
+    </header>
+    <nav>
+        <a href="./index.html"><button>About</button></a>
+        <a href="./attractions.html"><button>Attractions</button></a>
+        <a href="./index.html"><button>Contact</button></a>
+        <a href="./index.html"><button>Libraries Used</button></a>
+    </nav>
+    <main style="text-align: center;">
+        <h2>The Page You Are Accessing Does Not Exist</h2>
+        <br />
+        <span>Please click one of the links in the navbar.</span>
+    </main>
+    <footer>
+        <p>Copyright © 2022 Houston Herald - All Rights Reserved</p>
+        <div id="socials">
+            <a href="https://twitter.com/EmperorBob77" target="_"><img src="./images/Twitter.webp" /></a>
+            <a href="https://www.reddit.com/user/reEmperorBob" target="_"><img src="./images/Reddit.webp" /></a>
+            <a href="https://github.com/EmperorBob7/" target="_"><img src="./images/Github.webp" /></a>
+        </div>
+    </footer>
+    <script src="./lib/tablesort.min.js"></script>
+    <script src="attractions.js"></script>
+    <script>
+        new Tablesort(document.getElementById("attractionsTable"));
+    </script>
+</body>
+
+</html>
