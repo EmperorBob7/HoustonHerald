@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="attractions.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Houston Herald</title>
+    <meta name="viewport">
+    <meta name="description" content="The best website for quickly finding attractions for you in Houston.">
+    <link rel="icon" type="image/x-icon" href="./images/Logo.webp">
 </head>
 
 <body>
@@ -14,17 +17,95 @@
         <a href="./index.html">
             <h1>Houston Herald</h1>
         </a>
-        <img src="./images/Logo.webp" />
+        <img src="./images/Logo.webp" alt="Logo"/>
     </header>
     <nav>
         <a href="./index.html"><button>About</button></a>
         <a href="./attractions.html"><button id="selected">Attractions</button></a>
-        <a href="./index.html"><button>Contact</button></a>
-        <a href="./index.html"><button>Libraries Used</button></a>
+        <a href="./contact.html"><button>Contact</button></a>
     </nav>
     <main>
         <h2>Attractions</h2>
         <br />
+        <label class="tip">Filters<span>Filters are used concurrently.</span></label>
+        <div id="filters">
+            <input type="text" placeholder="Type a name..." id="name" />
+            <select name="location" id="location">
+                <option value="None">None</option>
+                <option value="N">North</option>
+                <option value="S">South</option>
+                <option value="E">East</option>
+                <option value="W">West</option>
+                <option value="C">Central</option>
+            </select>
+            <select name="price" id="price">
+                <option value="None">None</option>
+                <option value="0">0</option>
+                <option value="$">$</option>
+                <option value="$$">$$</option>
+                <option value="$$$">$$$</option>
+                <option value="$$$$">$$$$</option>
+            </select>
+            <select name="physical" id="physical">
+                <option value="None">None</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <select name="rating" id="rating">
+                <option value="None">None</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+            </select>
+            <select name="type" id="type">
+                <option value="None">None</option>
+                <option value="Art">Art</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Educational">Educational</option>
+                <option value="Events">Events</option>
+                <option value="Food & Drinks">Food & Drinks</option>
+                <option value="Historical">Historical</option>
+                <option value="Indoor">Indoor</option>
+                <option value="Outdoor">Outdoor</option>
+                <option value="Shop">Shop</option>
+                <option value="Shows">Shows</option>
+                <option value="Sports">Sports</option>
+                <option value="Tour">Tour</option>
+                <option value="Transportation">Transportation</option>
+                <!--Add the rest in alphabetical order-->
+            </select>
+            <select name="category" id="category">
+                <option value="None">None</option>
+                <option value="Airport">Airport</option>
+                <option value="Amusement Park">Amusement Park</option>
+                <option value="Aquarium">Aquarium</option>
+                <option value="Casino">Casino</option>
+                <option value="Fun & Games">Fun & Games</option>
+                <option value="Library">Library</option>
+                <option value="Mall">Mall</option>
+                <option value="Monument">Monument</option>
+                <option value="Museum">Museum</option>
+                <option value="Nature">Nature</option>
+                <option value="Park">Park</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="School">School</option>
+                <option value="Spa">Spa</option>
+                <option value="Stadium">Stadium</option>
+                <option value="Store">Store</option>
+                <option value="Temple">Temple</option>
+                <option value="Theater">Theater</option>
+                <option value="Water Park">Water Park</option>
+                <option value="Zoo">Zoo</option>
+                <!--Add the rest in alphabetical order-->
+            </select>
+            <select name="membership" id="membership">
+                <option value="None">None</option>
+                <option value="✓">✓</option>
+                <option value="X">X</option>
+            </select>
+        </div>
+        <hr />
         <div id="tableContainer">
             <table id="attractionsTable">
                 <thead>
@@ -44,28 +125,30 @@
             </table>
             <br />
             <caption>
-                0 = Free<br />
-                $ = 0.01 - 12.00<br />
-                $$ = 12.01 - 24.00<br />
-                $$$ = 24.01 - 36.00
+                0 = No Cost<br /> $ = 0.01 - 12.00<br /> $$ = 12.01 - 24.00<br /> $$$ = 24.01 - 36.00<br />$$$$ = 36.01+
             </caption>
         </div>
         <div id="addressFloater">
-            <div id="contentBox">
-                <div id="bar">
-                    <h6>Address</h6>
-                    <p id="closeFloater">X</p>
+            <div id="bg">
+                <div id="contentBox">
+                    <div id="bar">
+                        <h6>Address</h6>
+                        <p id="closeFloater">X</p>
+                    </div>
+                    <div>
+                        <input id="content" disabled/>
+                        <div style="position:absolute; left:0; right:0; top:0; bottom:0;" id="contentEvent" class="tip"><span>Copied!</span></div>
+                    </div>
                 </div>
-                <div id="content">10700 Fry Rd, Cypress, TX 77433</div>
             </div>
         </div>
     </main>
     <footer>
         <p>Copyright © 2022 Houston Herald - All Rights Reserved</p>
         <div id="socials">
-            <a href="https://twitter.com/EmperorBob77" target="_"><img src="./images/Twitter.webp" /></a>
-            <a href="https://www.reddit.com/user/reEmperorBob" target="_"><img src="./images/Reddit.webp" /></a>
-            <a href="https://github.com/EmperorBob7/" target="_"><img src="./images/Github.webp" /></a>
+            <a href="https://twitter.com/EmperorBob77" target="_"><img src="./images/Twitter.webp" alt="Twitter Logo"/></a>
+            <a href="https://www.reddit.com/user/reEmperorBob" target="_"><img src="./images/Reddit.webp" alt="Reddit Logo"/></a>
+            <a href="https://github.com/EmperorBob7/" target="_"><img src="./images/Github.webp" alt="GitHub Logo"/></a>
         </div>
     </footer>
     <script src="./lib/tablesort.min.js"></script>

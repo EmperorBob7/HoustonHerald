@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="./images/Logo.webp">
+  <link rel="stylesheet" href="contact.css"/>
+  <title>Houston Herald</title>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html">
+      <h1>Houston Herald</h1>
+    </a>
+    <img src="./images/Logo.webp" />
+  </header>
+  <nav>
+    <a href="./index.html"><button>About</button></a>
+    <a href="./attractions.html"><button>Attractions</button></a>
+    <a href="./contact.html"><button id="selected">Contact</button></a>
+  </nav>
+  <main>
+      <h2>Contact</h2><br/>
+      <h3><a href="faq.html" style="text-decoration: underline;">FAQ</a></h3>
+      <p>Before you send a message, try checking the FAQ!</p>
+      <form>
+        <label>Name<sup>*</sup>: </label><input id="name" type="text" required/><br/>
+        <label>Email<sup>*</sup>: </label><input id="email" type="text" required/><br/>
+        <label>Question<sup>*</sup>: </label><input id="question" type="text" required/><br/>
+        <label title="Suggest an Attraction (Optional)">Suggestion: </label><input id="suggestion" type="text"/><br/>
+        <input type="button" value="Submit" id="submit"/>
+      </form>
+  </main>
+  <footer>
+    <p>Copyright © 2022 Houston Herald - All Rights Reserved</p>
+    <div id="socials">
+      <a href="https://twitter.com/EmperorBob77" target="_"><img src="./images/Twitter.webp" /></a>
+      <a href="https://www.reddit.com/user/reEmperorBob" target="_"><img src="./images/Reddit.webp" /></a>
+      <a href="https://github.com/EmperorBob7/" target="_"><img src="./images/Github.webp" /></a>
+    </div>
+  </footer>
+  <script src="contact.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+form {
+    background-color: #3b3d47;
+    padding: 1.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+input {
+    width: 25%;
+    border: 1px solid var(--background);
+    padding: 2px;
+    margin: 1%;
+    height: 2em;
+}
+
+label {
+    width: 10%;
+    display: inline-block;
+    text-align: right;
+    margin-right: 1%;
+}
+
+input:focus {
+    outline: none;
+}
+
+a:hover {
+    color: var(--linkHover);
+}
+
+input[type=button] {
+    width: 36%;
+    font-size: 1.1vw;
+}
+
+sup {
+    color: red;
+}

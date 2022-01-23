@@ -8,14 +8,15 @@
     background-color: #444;
     display: flex;
     flex-flow: column;
-    max-height: 100%;
+    min-height: 75%;
+    max-height: 75%;
     width: 100%;
     text-align: center;
     color: black;
 }
 
 thead {
-    background-color: hsl(162, 50%, 50%);
+    background-color: #40bf99;
     color: var(--background);
     width: calc(100% - 0.99vw);
 }
@@ -29,7 +30,8 @@ table tbody tr {
     width: 100%;
 }
 
-table thead, table tbody tr {
+table thead,
+table tbody tr {
     display: table;
     table-layout: fixed;
 }
@@ -39,7 +41,8 @@ th {
     font-size: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     width: 12.5%;
     max-width: 12.5%;
@@ -57,10 +60,6 @@ ul {
     list-style-type: none;
 }
 
-.checked {
-    color: rgb(238, 238, 53);
-}
-
 .fa {
     margin: 1.5px;
 }
@@ -70,7 +69,8 @@ main {
     padding-right: 2%;
 }
 
-#addressFloater {
+#addressFloater,
+#bg {
     display: none;
     position: absolute;
     top: 0;
@@ -82,18 +82,24 @@ main {
     align-items: center;
 }
 
+#bg {
+    display: flex;
+}
+
 #contentBox {
     width: 50%;
     height: 25%;
     display: block;
-    background-color: hsl(162, 60%, 70%);
+    background-color: #85e0c5;
     color: black;
     text-align: center;
     display: grid;
-    grid-template:
-        "bar"
-        "content";
+    grid-template: "bar" "content";
     grid-template-rows: 20% 80%;
+}
+
+#contentBox div {
+    position: relative;
 }
 
 #contentBox #bar {
@@ -105,6 +111,7 @@ main {
     font-size: 150%;
     background-color: #222;
     color: var(--white);
+    user-select: none;
 }
 
 #bar h6 {
@@ -115,15 +122,81 @@ main {
     grid-area: p;
 }
 
-#contentBox #content {
+#contentBox div {
     grid-area: content;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+#content {
+    background-color: #85e0c5;
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--background);
 }
 
 main p {
     line-height: 1;
     border-left: none;
     padding-left: 0px;
+}
+
+#filters {
+    width: calc(100% - 0.99vw);
+    margin-bottom: 1vh;
+    display: flex;
+}
+
+#filters>* {
+    width: 12.5%;
+    padding: 5px;
+    font-size: 1.05vw;
+    background-color: #DDD;
+    border: 2px solid black;
+}
+
+#filters>*:focus {
+    outline: none;
+}
+
+
+/*Tool Tip*/
+
+.tip:hover {
+    cursor: help;
+    position: relative;
+}
+
+.tip span {
+    display: none;
+}
+
+.tip:hover span {
+    border: var(--background) 1px solid;
+    color: var(--background);
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: #f0f0f0 no-repeat 100% 5%;
+    left: auto;
+    margin: 10px;
+    width: 15vw;
+    position: absolute;
+    top: auto;
+    text-decoration: none;
+    font-size: .9vw;
+    opacity: 1;
+}
+
+#contentBox .tip span {
+    transform: translateY(-100%);
+}
+
+.tip span:hover {
+    display: none;
 }
